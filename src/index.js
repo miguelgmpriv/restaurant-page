@@ -16,21 +16,27 @@ const pageHeader = (() => {
         li.id = element;
         navBar.appendChild(li);
     })
-/*     const homeLink = document.createElement('li');
-    const menuLink = document.createElement('li');
-    const contactLink = document.createElement('li');
- */
+
     header.classList.add('header');
+    navBar.classList.add('navbar');
 
     header.textContent = 'The Hungry Cat Cafe';
-/*     homeLink.textContent = 'Home';
-    menuLink.textContent = 'Menu';
-    contactLink.textContent = 'Contact';
-
-    navBar.appendChild(homeLink);
-    navBar.appendChild(menuLink);
-    navBar.appendChild(contactLink); */
 
     mainContainer.appendChild(header);
     header.appendChild(navBar);
+})();
+
+const pageFooter = (() => {
+    const footer = document.createElement('div');
+    footer.classList.add('footer');
+    const creditsLinks = document.createElement('ul');
+    const a = document.createElement('a');
+    a.title = 'test';
+    a.href = 'https://www.freepik.com/photos/food';
+    const li = document.createElement('li')
+    li.textContent = 'Food photo created by timolina - www.freepik.com';
+    a.appendChild(li);
+    creditsLinks.appendChild(a);
+    footer.appendChild(creditsLinks);
+    mainContainer.appendChild(footer)
 })();
