@@ -1,37 +1,24 @@
 import './styles.css';
+import pageHeader from './header-footer.js';
 
 const mainContainer = document.createElement('div')
 mainContainer.classList.add('container');
 document.body.appendChild(mainContainer);
 
+pageHeader(mainContainer);
 
-const pageHeader = (() => {
-    const linkArray = ['home','menu','contact']
-    const header = document.createElement('div');
-    const navBar = document.createElement('ul');
-
-    linkArray.forEach(element => {
-        const li = document.createElement('li');
-        li.textContent = element[0].toUpperCase() + element.slice(1);
-        li.id = element;
-        navBar.appendChild(li);
-    })
-
-    header.classList.add('header');
-    navBar.classList.add('navbar');
-
-    header.textContent = 'The Hungry Cat Cafe';
-
-    mainContainer.appendChild(header);
-    header.appendChild(navBar);
+const pageContent = (() => {
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.textContent = 'Leave the whiskas at home and come enjoy our decadent fancy feast prepared by our team of world class chefs!';
+    mainContainer.appendChild(content);
 })();
-
 const pageFooter = (() => {
     const footer = document.createElement('div');
     footer.classList.add('footer');
     const creditsLinks = document.createElement('ul');
     const a = document.createElement('a');
-    a.title = 'test';
+    a.title = 'https://www.freepik.com/photos/food';
     a.href = 'https://www.freepik.com/photos/food';
     const li = document.createElement('li')
     li.textContent = 'Food photo created by timolina - www.freepik.com';

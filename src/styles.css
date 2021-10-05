@@ -21,6 +21,8 @@ li{
 }
 a {
     text-decoration: none;
+    color: white;
+    
 }
 .container{
     width: 100vw;
@@ -46,8 +48,18 @@ a {
 .navbar{
     font-size: .5em;
 }
+.content{
+    width: 80vw;
+    min-height: 50vh;
+    padding: 1rem;
+    background-color: rgba(10, 10, 10, 0.541);
+    color: rgb(226, 208, 208);
+    margin: auto;
+    text-align: center;
+}
 .footer{
     color: rgb(226, 208, 208);
     background-color: rgba(10, 10, 10, 0.541);
     padding: 1rem;
+    font-size: .5em;
 }
