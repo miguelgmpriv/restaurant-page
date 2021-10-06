@@ -23,6 +23,9 @@ ul {
 li{
     padding: 1rem;
 }
+li:hover{
+    cursor: pointer;
+}
 a {
     text-decoration: none;
     color: white;
@@ -64,6 +67,7 @@ img{
 }
 .content{
     align-self: center;
+    min-height: 50vh;
     width: 80vw;
     line-height: 1.25;
     padding: 1rem;
@@ -84,9 +88,7 @@ img{
 .customer-review{
     align-self: flex-start;
 }
-.menu{
 
-}
 .footer{
     color: rgb(226, 208, 208);
     background-color: rgba(10, 10, 10, 0.541);
