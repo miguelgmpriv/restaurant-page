@@ -1,10 +1,11 @@
 import './styles.css';
-import { pageHeader, pageFooter, navLinks } from './header-footer.js';
+import { pageHeader, pageFooter, navBar } from './header-footer.js';
 import { pageHome } from './home.js';
+import { pageMenu } from './menu.js';
 
 const mainContainer = document.createElement('div')
 mainContainer.classList.add('container');
-let content;
+let content = document.createElement('div');
 
 document.body.appendChild(mainContainer);
 
@@ -13,10 +14,5 @@ content = pageHome();
 mainContainer.appendChild(content);
 pageFooter(mainContainer);
 
-const clearPage = () => {
-    while(content.firstChild){
-        content.removeChild(content.lastChild);
-    }
-}
-
-clearPage();
+console.log(navBar);
+mainContainer.replaceChild(pageMenu(), content);

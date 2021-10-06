@@ -33,3 +33,29 @@ menuItems[2] = new menuItem(
 );
 
 const content = document.createElement('div');
+content.classList.add('content');
+
+menuItems.forEach(element =>{
+    const itemContainer = document.createElement('div');
+    const itemName = document.createElement('h4');
+    const itemIngredients = document.createElement('p');
+    const itemPrice = document.createElement('p');
+    const itemImage = new Image();
+
+    itemName.textContent = element.name;
+    itemIngredients.textContent = element.ingredients;
+    itemPrice.textContent = element.price;
+    itemImage.src = element.image;
+
+    itemContainer.appendChild(itemName);
+    itemContainer.appendChild(itemIngredients);
+    itemContainer.appendChild(itemPrice);
+    itemContainer.appendChild(itemImage);
+    content.appendChild(itemContainer)
+});
+
+const pageMenu = () => {
+    return content;
+}
+
+export { pageMenu };

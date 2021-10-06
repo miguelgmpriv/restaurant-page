@@ -52,4 +52,4 @@ const pageFooter = ((element) => {
     element.appendChild(footer)
 });
 
-export { pageHeader , pageFooter, navLinks };
+export { pageHeader , pageFooter, navLinks, navBar };
