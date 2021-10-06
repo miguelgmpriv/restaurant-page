@@ -6,6 +6,7 @@ module.exports = {
     entry: {
       index: './src/index.js',
       headfoot: './src/header-footer.js',
+      home: './src/home.js'
     },
     devServer: {
         static: './dist',
@@ -16,8 +17,13 @@ module.exports = {
         }),
     ],
     output: {
+        publicPath: '/',
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true,
+    },
+    optimization: {
+      runtimeChunk: 'single',
     },
     module: {
         rules: [
