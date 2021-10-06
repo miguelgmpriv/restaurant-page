@@ -13,7 +13,7 @@ html{
 @media (min-width: 800px) {
     html{font-size: 20px;}
     .content{
-        max-width: 50vw;
+        max-width: 40vw;
     }
 }
 ul {
@@ -37,11 +37,15 @@ a {
     flex-direction: column;
     justify-content: space-between;
 }
-.header{
+.header,
+.footer,
+.content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.header{
     font-family: 'Dancing Script', cursive;
     font-weight: bolder;
     font-size: 2rem;
@@ -55,22 +59,30 @@ a {
     font-style: normal;
 }
 .content{
+    align-self: center;
     width: 80vw;
-    min-height: 50vh;
     line-height: 1.25;
     padding: 1rem;
     background-color: rgba(10, 10, 10, 0.541);
     color: rgb(226, 208, 208);
-    margin: auto;
+    gap: .5rem;
+}
+.restaurant-text{
+    font-family: 'Dancing Script', cursive;
+    margin: 0 0 1rem 0;
     text-align: center;
+}
+.customer{
+    font-family: 'Dancing Script', cursive;
+    align-self: flex-end;
+    font-weight: bold;
+}
+.customer-review{
+    align-self: flex-start;
 }
 .footer{
     color: rgb(226, 208, 208);
     background-color: rgba(10, 10, 10, 0.541);
     padding: 1rem;
     font-size: .75rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
