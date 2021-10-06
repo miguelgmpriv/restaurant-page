@@ -9,6 +9,7 @@ const restaurantTextDiv = document.createElement('div');
 
 restaurantTextDiv.classList.add('restaurant-text');
 content.classList.add('content');
+content.id = 'content';
 
 const restaurantText = [
     'Tired and with no energy to cook?',
@@ -43,8 +44,8 @@ customerReviews.forEach(element => {
     content.appendChild(p);
 });
 
-const pageHome = (() =>{
+const pageHome = () =>{
     return content;
-});
+};
 
 export { pageHome };

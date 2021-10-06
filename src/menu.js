@@ -34,6 +34,7 @@ menuItems[2] = new menuItem(
 
 const content = document.createElement('div');
 content.classList.add('content');
+content.id = 'content';
 
 menuItems.forEach(element =>{
     const itemContainer = document.createElement('div');
