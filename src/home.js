@@ -43,8 +43,8 @@ customerReviews.forEach(element => {
     content.appendChild(p);
 });
 
-const pageHome = ((element) =>{
-    element.appendChild(content);
+const pageHome = (() =>{
+    return content;
 });
 
 export { pageHome };
